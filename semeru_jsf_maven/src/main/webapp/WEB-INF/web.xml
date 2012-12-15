@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    
+    <display-name>semeru_jsf_maven</display-name>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <!--        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>-->
+    </welcome-file-list>
+    
+    <!-- Duração da sessão -->
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <!-- Configurações do tema do PrimeFaces -->
+    
+    <dependency>  
+        <groupId>org.primefaces.themes</groupId>  
+        <artifactId>south-street</artifactId>  
+        <version>1.0.4</version>  
+    </dependency> 
+
+    <context-param>  
+        <param-name>primefaces.THEME</param-name>  
+        <param-value>south-street</param-value>  
+    </context-param>  
+    
+    <!-- Configurações do JavaServer Faces -->
+    
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+        
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.faces</url-pattern>
+    </servlet-mapping>
+    
+    <security-constraint>
+        <display-name>Bloqueia o browser de acessar arquivos xhtml</display-name>
+        <web-resource-collection>
+            <web-resource-name>xhtml files</web-resource-name>
+            <url-pattern>*.xhtml</url-pattern>
+        </web-resource-collection>
+        <auth-constraint/>
+    </security-constraint>
+    
+    <!-- Configurações do PrimeFaces -->
+    
+    <servlet>
+        <servlet-name>Resource Servlet</servlet-name>
+        <servlet-class>org.primefaces.resource.ResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Resource Servlet</servlet-name>
+        <url-pattern>/primefaces_resource/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Filtros de Upload -->
+    
+    <filter>  
+        <filter-name>PrimeFaces FileUpload Filter</filter-name>  
+        <filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>PrimeFaces FileUpload Filter</filter-name>  
+        <servlet-name>Faces Servlet</servlet-name>  
+    </filter-mapping> 
+</web-app>
