@@ -1,4 +1,4 @@
-package br.com.semeru.model.etities;
+package br.com.semeru.model.entities;
 
 import java.io.Serializable;
 import javax.persistence.Column;
