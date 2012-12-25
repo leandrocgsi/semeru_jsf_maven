@@ -8,11 +8,11 @@ import java.io.Serializable;
 import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 
 @ManagedBean(name = "mbCidade")
-@SessionScoped
+@RequestScoped
 public class MbCidade implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -62,7 +62,7 @@ public class MbCidade implements Serializable {
         cidadeDAO().remove(cidade);        
     }
     
-    public List<Cidade> getCidades() {
+    public List<Cidade> getCidades() {       
         cidades = cidadeDAO().getEntities();
         return cidades;
     }
