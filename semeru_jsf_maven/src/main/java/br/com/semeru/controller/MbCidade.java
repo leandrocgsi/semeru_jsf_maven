@@ -16,6 +16,7 @@ import javax.faces.context.FacesContext;
 public class MbCidade implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
     private Cidade cidade = new Cidade();
     private List<Cidade> cidades;
 
@@ -29,7 +30,7 @@ public class MbCidade implements Serializable {
 
     public String limpCidade() {
         cidade = new Cidade();
-        return "/restrict/cadastrarcidade.faces";
+        return editCidade();
     }
 
     public String editCidade() {

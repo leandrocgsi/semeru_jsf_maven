@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="./../resources/main.xhtml">
+
+    <ui:define name="tarefas">
+        <p:fieldset legend="Cadastrar Pessoas">
+            
+            <br/>
+            <h:form>
+                <p:wizard nextLabel="Próxima Aba" backLabel="Aba Anterior">
+                    <p:tab title="Informações Básicas" id="infoPessoal">
+                        <p:panel header="Informações Básicas da Pessoa">
+                            <p:growl id="msg0"/>
+                            <h:panelGrid columns="2" cellpadding="10" styleClass="panelGrid" id="grid0">
+
+                            </h:panelGrid>
+                        </p:panel>
+                    </p:tab>
+
+                    <p:tab title="Informações do Endereço" id="infoEndereco">
+                        <p:panel header="Informações do Endereço">
+                            <p:growl id="msg1"/>
+                            <h:panelGrid columns="2" cellpadding="10" styleClass="panelGrid" id="grid1">
+
+                            </h:panelGrid>
+                        </p:panel>
+                    </p:tab>
+                </p:wizard>
+            </h:form>
+        </p:fieldset>
+    </ui:define>
+
+</ui:composition>
