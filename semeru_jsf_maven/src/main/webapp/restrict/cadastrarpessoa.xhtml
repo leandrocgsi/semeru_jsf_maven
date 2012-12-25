@@ -18,7 +18,43 @@
                         <p:panel header="Informações Básicas da Pessoa">
                             <p:growl id="msg0"/>
                             <h:panelGrid columns="2" cellpadding="10" styleClass="panelGrid" id="grid0">
-
+                                
+                                <h:outputLabel/>
+                                <h:inputHidden id="idpessoa" value="#{mbPessoa.pessoa.idPessoa}"/> 
+                                
+                                <h:outputLabel for="nomePessoa" value="Nome.:"/>
+                                <p:inputText id="nomePessoa" size="40" value="#{mbPessoa.pessoa.nome}"
+                                    required="true" requiredMessage="O campo [Nome] é obrigatório"
+                                    onkeyup="this.value = this.value.toUpperCase()"/>
+                                
+                                <h:outputLabel for="sexo" value="Sexo.:"/>
+                                <p:selectOneMenu id="sexo" value="#{mbPessoa.pessoa.sexo.idSexo}">
+                                    <f:selectItems/>
+                                </p:selectOneMenu>
+                                
+                                <h:outputLabel for="telefone" value="Telefone.:"/>
+                                <p:inputMask id="telefone" size="40" mask="(99) 9999-9999"
+                                    value="#{mbPessoa.pessoa.telefone}"
+                                    required="true" requiredMessage="O campo [Telefone] é obrigatório"
+                                    onkeyup="this.value = this.value.toUpperCase()"/>
+                                
+                                <h:outputLabel for="email" value="E-mail.:"/>
+                                <p:inputText id="email" size="40" value="#{mbPessoa.pessoa.email}"
+                                             required="true" requiredMessage="O campo [E-mail] é obrigatório">
+                                    <f:validator validatorId="emailValidator"/>
+                                </p:inputText>
+                                
+                                <h:outputLabel for="cpf" value="CPF.:"/>
+                                <p:inputText id="cpf" size="40" value="#{mbPessoa.pessoa.cpf}"
+                                             required="true" requiredMessage="O campo [CPF] é obrigatório">
+                                    <f:validator validatorId="cpfValidator"/>
+                                </p:inputText>
+                                
+                                <h:outputLabel for="dataNascimento" value="Data de Nascimento.:"/>
+                                <p:calendar id="dataNascimento" value="#{mbPessoa.pessoa.dataDeNascimento}"
+                                    required="true" requiredMessage="O campo [Data de Nascimento] é obrigatório"
+                                    locale="pt_BR" navigator="true" effect="explode" pattern="dd/MM/yyyy"/>
+                                
                             </h:panelGrid>
                         </p:panel>
                     </p:tab>
