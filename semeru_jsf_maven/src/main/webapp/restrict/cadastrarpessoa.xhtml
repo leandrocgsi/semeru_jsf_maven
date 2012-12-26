@@ -29,7 +29,7 @@
                                 
                                 <h:outputLabel for="sexo" value="Sexo.:"/>
                                 <p:selectOneMenu id="sexo" value="#{mbPessoa.pessoa.sexo.idSexo}">
-                                    <f:selectItems/>
+                                    <f:selectItems value="#{bbSexo.sexos}" var="sexo" itemValue="#{sexo.idSexo}" itemLabel="#{sexo.descricao}"/>
                                 </p:selectOneMenu>
                                 
                                 <h:outputLabel for="telefone" value="Telefone.:"/>
@@ -55,6 +55,13 @@
                                     required="true" requiredMessage="O campo [Data de Nascimento] é obrigatório"
                                     locale="pt_BR" navigator="true" effect="explode" pattern="dd/MM/yyyy"/>
                                 
+                                                            
+                                <p:panel>
+                                    <p:commandButton value="Salvar" action="#{mbPessoa.addPessoa}"
+                                        image="ui-icon ui-icon-disk" update="@form"/>
+                                    <p:commandButton value="Cancelar" actionListener="#{mbPessoa.limpPessoa}" 
+                                        image="ui-icon ui-icon-close" update="@form"/>
+                                </p:panel>
                             </h:panelGrid>
                         </p:panel>
                     </p:tab>
