@@ -54,14 +54,7 @@
                                 <p:calendar id="dataNascimento" value="#{mbPessoa.pessoa.dataDeNascimento}"
                                     required="true" requiredMessage="O campo [Data de Nascimento] é obrigatório"
                                     locale="pt_BR" navigator="true" effect="explode" pattern="dd/MM/yyyy"/>
-                                
-                                                            
-                                <p:panel>
-                                    <p:commandButton value="Salvar" action="#{mbPessoa.addPessoa}"
-                                        image="ui-icon ui-icon-disk" update="@form"/>
-                                    <p:commandButton value="Cancelar" actionListener="#{mbPessoa.limpPessoa}" 
-                                        image="ui-icon ui-icon-close" update="@form"/>
-                                </p:panel>
+                                                                                           
                             </h:panelGrid>
                         </p:panel>
                     </p:tab>
@@ -70,7 +63,58 @@
                         <p:panel header="Informações do Endereço">
                             <p:growl id="msg1"/>
                             <h:panelGrid columns="2" cellpadding="10" styleClass="panelGrid" id="grid1">
+                                
+                                <h:outputLabel for="uf" value="Estado.:" />
+                                <p:selectOneMenu id="uf" value="#{mbPessoa.endereco.estado.idEstado}">
+                                    <f:selectItems value="#{bbEstado.estados}" var="estado"
+                                        itemValue="#{estado.idEstado}" itemLabel="#{estado.nomeEstado}"/>
+                                </p:selectOneMenu>
+                                
 
+                                <h:outputLabel for="cidade" value="Cidade.:" />
+                                <p:selectOneMenu id="cidade" value="#{mbPessoa.endereco.cidade.idCidade}">
+                                    <f:selectItems value="#{bbCidade.cidades}" var="cidade"
+                                        itemValue="#{cidade.idCidade}" itemLabel="#{cidade.nome}"/>
+                                </p:selectOneMenu>
+                                
+
+                                <h:outputLabel for="bairro" value="Bairro.:"/>
+                                <p:inputText id="bairro" size="60" value="#{mbPessoa.endereco.bairro}" required="true" 
+                                    requiredMessage="É obrigatório o preenchimento do campo [Bairro]"
+                                    onkeyup="this.value = this.value.toUpperCase()"/>
+
+                                <h:outputLabel for="idTipoEndereco" value="Tipo de Endereço.:"/>
+                                <p:selectOneMenu id="idTipoEndereco" value="#{mbPessoa.endereco.tipoendereco.idTipoEndereco}">
+                                    <f:selectItems value="#{bbTipoEndereco.tipoEnderecos}" var="tipoEndereco"
+                                    itemValue="#{tipoEndereco.idTipoEndereco}" itemLabel="#{tipoEndereco.descricaoTipoEndereco}"/>
+                                </p:selectOneMenu>
+
+                                <h:outputLabel for="idTipoLogradouro" value="Tipo de Logradouro.:"/>
+                                <p:selectOneMenu id="idTipoLogradouro" value="#{mbPessoa.endereco.tipologradouro.idTipoLogradouro}">
+                                    <f:selectItems value="#{bbTipoLogradouro.tipoLogradouros}" var="tipoLogradouro"
+                                    itemValue="#{tipoLogradouro.idTipoLogradouro}" itemLabel="#{tipoLogradouro.descricaoTipoLogradouro}"/>
+                                </p:selectOneMenu>
+
+                                <h:outputLabel for="nomelogradouro" value="Logradouro.:"/>
+                                <p:inputText id="nomelogradouro" size="75" value="#{mbPessoa.endereco.nomeLogradouro}" 
+                                    required="true" requiredMessage="É obrigatório o preenchimento do campo [Logradouro]"
+                                    onkeyup="this.value = this.value.toUpperCase()"/>
+
+                                <h:outputLabel for="cep" value="CEP.:"/>
+                                <p:inputMask id="cep" size="10" value="#{mbPessoa.endereco.cep}" mask="99999-999" required="true" requiredMessage="É obrigatório o preenchimento do campo [CEP]"/> 			
+
+                                <h:outputLabel for="numero" value="Numero.:"/>
+                                <p:inputText id="numero" size="8" value="#{mbPessoa.endereco.numero}" required="true" requiredMessage="É obrigatório o preenchimento do campo [Número]"/>	
+
+                                <h:outputLabel for="complemento" value="Complemento.:"/>
+                                <p:inputText id="complemento" size="20" value="#{mbPessoa.endereco.complemento}" onkeyup="this.value = this.value.toUpperCase()"/>
+
+                                <p:panel>
+                                    <p:commandButton value="Salvar" action="#{mbPessoa.addPessoa}"
+                                        image="ui-icon ui-icon-disk" update="@form"/>
+                                    <p:commandButton value="Cancelar" actionListener="#{mbPessoa.limpPessoa}" 
+                                        image="ui-icon ui-icon-close" update="@form"/>
+                                </p:panel>
                             </h:panelGrid>
                         </p:panel>
                     </p:tab>

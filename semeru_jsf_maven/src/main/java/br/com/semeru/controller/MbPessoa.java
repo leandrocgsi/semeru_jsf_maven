@@ -51,7 +51,7 @@ public class MbPessoa  implements Serializable {
         Date date = new Date();
         if (pessoa.getIdPessoa() == null || pessoa.getIdPessoa() == 0){
             pessoa.setDataDeCadastro(date);
-            insertPessoa();
+            insertPessoa();            
         } else {
             updatePessoa();
         }
@@ -61,18 +61,22 @@ public class MbPessoa  implements Serializable {
 
     private void insertPessoa() {
         pessoaDAO().save(pessoa);
+            endereco.setPessoa(pessoa);
+        enderecoDAO().save(endereco);
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage(FacesMessage.SEVERITY_INFO, "Gravação efetuada com sucesso", ""));
     }
 
     private void updatePessoa() {
         pessoaDAO().update(pessoa);
+        enderecoDAO().update(endereco);
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage(FacesMessage.SEVERITY_INFO, "Atualização efetuada com sucesso", ""));
     }
     
     public String deletePessoa() {
         pessoaDAO().remove(pessoa);
+        enderecoDAO().remove(endereco);
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage(FacesMessage.SEVERITY_INFO, "Registro excluído com sucesso", ""));
         return null;
