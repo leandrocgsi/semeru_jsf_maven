@@ -19,6 +19,7 @@ public class MbPessoa  implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    private String confereSenha;
     private Pessoa pessoa = new Pessoa();
     private Endereco endereco = new Endereco();
     private List<Pessoa> pessoas;
@@ -60,6 +61,7 @@ public class MbPessoa  implements Serializable {
     }
 
     private void insertPessoa() {
+        comparaSenha();
         pessoaDAO().save(pessoa);
             endereco.setPessoa(pessoa);
         enderecoDAO().save(endereco);
@@ -81,7 +83,17 @@ public class MbPessoa  implements Serializable {
                 new FacesMessage(FacesMessage.SEVERITY_INFO, "Registro excluído com sucesso", ""));
         return null;
     }
-
+    
+    private Boolean comparaSenha() {
+        if (pessoa.getSenha() == null ? confereSenha == null : pessoa.getSenha().equals(confereSenha)) {
+            return true;
+        } else{        
+            FacesContext.getCurrentInstance().addMessage(null,
+                new FacesMessage(FacesMessage.SEVERITY_INFO, "As senhas não conferem.", ""));
+            return false;
+        }       
+    }
+    
     public List<Pessoa> getPessoas() {
         pessoas = pessoaDAO().getEntities();
         return pessoas;
@@ -114,6 +126,14 @@ public class MbPessoa  implements Serializable {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public String getConfereSenha() {
+        return confereSenha;
+    }
+
+    public void setConfereSenha(String confereSenha) {
+        this.confereSenha = confereSenha;
     }
     
 }

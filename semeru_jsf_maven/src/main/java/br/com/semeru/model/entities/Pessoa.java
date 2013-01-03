@@ -39,6 +39,13 @@ public class Pessoa implements Serializable {
     @Column (name="DataDeCadastro", nullable = false)
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dataDeCadastro;
+        
+    @Column(name = "Login", unique=true, length = 25)
+    private String login;
+    @Column(name = "Senha", length = 40)
+    private String senha;
+    @Column(name = "Permissao", length = 36)
+    private String permissao;
     
     @OneToOne(mappedBy = "pessoa", fetch = FetchType.LAZY)
     @ForeignKey(name="EnderecoPessoa")
@@ -124,7 +131,31 @@ public class Pessoa implements Serializable {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-        
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getPermissao() {
+        return permissao;
+    }
+
+    public void setPermissao(String permissao) {
+        this.permissao = permissao;
+    }
+         
     @Override
     public int hashCode() {
         int hash = 7;
