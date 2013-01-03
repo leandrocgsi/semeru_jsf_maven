@@ -366,7 +366,140 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
-        </dependency>  
+        </dependency> 
+        
+         <!-- |||| DEPENDÊNCIAS DO SPRING-SECURITY || -->  
+                                                 
+        <!-- ### FACELETS-TAGLIB-JSF2.0-SPRING-3 ### -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>facelets-taglib-jsf20-spring-3</artifactId>
+            <version>0.5</version>
+        </dependency>
+                               
+        <!-- ####### SPRING-SECURITY-TAGLIBS ####### -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>3.0.5.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-security-acl</artifactId>
+                    <groupId>org.springframework.security</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>            
+        
+        <!-- ####### SPRING-SECURITY-CONFIG ######## -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>3.0.5.RELEASE</version>
+        </dependency>
+
+        <!-- ######## SPRING-SECURITY-CORE ######### -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>3.0.5.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>aspectjrt</artifactId>
+                    <groupId>org.aspectj</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>aspectjweaver</artifactId>
+                    <groupId>org.aspectj</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+ 
+        <!-- ######### SPRING-SECURITY-WEB ######### -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>3.0.5.RELEASE</version>
+        </dependency>
+
+        <!-- ||| DEPENDÊNCIAS DO SPRING FRAMEWORK |||-->          
+        <!-- ############# SPRING-ASM ############## -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-asm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- ############ SPRING-BEANS ############# -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- ########### SPRING-CONTEXT ############ -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+                
+        <!-- ############# SPRING-CORE ############# -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- ########## SPRING-EXPRESSION ########## -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- ############# SPRING-JDBC ############# -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>        
+        
+        <!-- ############## SPRING-TX ############## -->
+        <dependency>
+            <artifactId>spring-tx</artifactId>
+            <groupId>org.springframework</groupId>
+            <type>jar</type>
+            <version>3.0.5.RELEASE</version>
+        </dependency>
+        
+        <!-- ############# SPRING-WEB ############# -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>    
+
+        <!-- ############# SPRING-AOP ############# -->    
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- ############ AOP-ALLIANCE ############ -->
+        <dependency>
+            <artifactId>aopalliance</artifactId>
+            <groupId>aopalliance</groupId>
+            <type>jar</type>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- ############ AOP-ALLIANCE ############ -->
+        <dependency>            
+            <groupId>org.aopalliance</groupId>
+            <artifactId>com.springsource.org.aopalliance</artifactId>
+            <version>1.0.0</version>
+        </dependency> 
         
         <!-- ||||||| DEPENDÊNCIAS DO J-UNIT |||||||| -->        
         <dependency>

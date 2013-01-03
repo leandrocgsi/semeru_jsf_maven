@@ -11,14 +11,26 @@
     <h:head>
         <title>Semeru - Curso de JSF e Maven</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link href="./../resources/restrict/css/semeru.css" rel="stylesheet" type="text/css" />
-        <link href="./../resources/restrict/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />    
+        <link href="#{facesContext.externalContext.requestContextPath}/resources/restrict/css/semeru.css" rel="stylesheet" type="text/css" />
+        <link href="#{facesContext.externalContext.requestContextPath}/resources/restrict/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />    
     </h:head>
 
     <h:body>
 
         <div id="topo">
-            <a href="http://www.semeru.com.br/"><div id="logotipo"></div></a>
+            <a href="http://www.semeru.com.br/"><div id="logotipo"></div></a>            
+                        
+            <div id="logoff">
+                <h:form>
+                    <br/>
+                    <h5><h:outputText value="SEJA BEM VINDO(A) !"/></h5>
+                    <br/>
+                    <a href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout">
+	                <h4>LOGOFF</h4>
+	            </a>
+
+                </h:form>
+            </div>
         </div>  
 
         <div id="menu"><!-- Menu ########################################## Menu-->
@@ -43,7 +55,7 @@
         </div>
 
         <div id="rodape">
-            <a href="http://www.semeru.com.br/"><img src="./../resources/restrict/images/logo_mini.png" /></a>
+            <a href="http://www.semeru.com.br/"><img src="#{facesContext.externalContext.requestContextPath}/resources/restrict/images/logo_mini.png" /></a>
 
             <div id="copyright">                  
                 <a href="http://www.semeru.com.br/">Semeru - Curso de Java Server Faces com Hibernate, Maven e Spring Security - &copy; Copyright semeru.com.br 2012</a>
