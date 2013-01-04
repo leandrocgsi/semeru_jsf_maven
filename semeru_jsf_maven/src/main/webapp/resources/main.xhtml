@@ -23,7 +23,7 @@
             <div id="logoff">
                 <h:form>
                     <br/>
-                    <h5><h:outputText value="SEJA BEM VINDO(A) !"/></h5>
+                    <h5><h:outputText value="SEJA BEM VINDO(A) #{bbUsuarioLogado.procuraPessoa().getNome()}!"/></h5>
                     <br/>
                     <a href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout">
 	                <h4>LOGOFF</h4>

@@ -20,12 +20,6 @@
         </session-timeout>
     </session-config>
     
-    <!-- Configurações do tema do PrimeFaces -->
-    <context-param>  
-        <param-name>primefaces.THEME</param-name>  
-        <param-value>sam</param-value>  
-    </context-param>  
-    
      <!-- Endereço dos arquivos de configuração do Spring -->
     
     <context-param>
@@ -33,14 +27,13 @@
         <param-value>
             /WEB-INF/spring-security.xml
         </param-value>
-    </context-param>
-    
-    <!-- Configurações do JavaServer Faces -->
-    
-    <context-param>
-        <param-name>javax.faces.PROJECT_STAGE</param-name>
-        <param-value>Development</param-value>
-    </context-param>
+    </context-param> 
+
+    <!-- Configurações do tema do PrimeFaces -->
+    <context-param>  
+        <param-name>primefaces.THEME</param-name>  
+        <param-value>sam</param-value>  
+    </context-param>         
     
     <!-- Filtros do Spring  -->
     <listener>
@@ -56,6 +49,13 @@
         <dispatcher>FORWARD</dispatcher>
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
+    
+        <!-- Configurações do JavaServer Faces -->
+    
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
     
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
