@@ -7,5 +7,11 @@
     <lifecycle>
         <phase-listener>br.com.semeru.util.PhaseListenerSemeru</phase-listener>
     </lifecycle>
+    
+    <factory>
+	  <exception-handler-factory>
+	     br.com.semeru.exceptions.CustomExceptionHandlerFactory
+	  </exception-handler-factory>
+	</factory>
 
 </faces-config>
