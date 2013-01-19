@@ -10,7 +10,7 @@
     <name>semeru_jsf_maven</name>
 
     <properties>
-        <spring.version>3.0.5.RELEASE</spring.version>
+        <spring.version>3.1.1.RELEASE</spring.version>
         <themes.version>1.0.8</themes.version>
         <jsf.version>2.1.7</jsf.version>
         <jstl.version>1.2</jstl.version>
