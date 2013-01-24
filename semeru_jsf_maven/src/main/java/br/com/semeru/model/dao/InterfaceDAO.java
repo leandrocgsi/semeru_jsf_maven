@@ -12,6 +12,7 @@ public interface InterfaceDAO<T> {
     void merge (T entity);
     T getEntity(Serializable id);
     T getEntityByDetachedCriteria(DetachedCriteria criteria);
+    T getEntityByHQLQuery(String stringQuery);
     List<T> getEntities();
     List<T> getListByDetachedCriteria(DetachedCriteria criteria);    
     
