@@ -33,15 +33,11 @@ public class BbUsuarioLogado implements Serializable{
     }
     
     public Pessoa procuraPessoa(){
-        String login = getLoginUsuarioLogado();
+        String login =  usuario.getLogin();
         Session session = FacesContextUtil.getRequestSession();
         Query query = session.createQuery("from Pessoa user where user.login like ?");
         query.setString(0, login);
         return (Pessoa) query.uniqueResult();
-    }
-
-    private String getLoginUsuarioLogado() {
-        return usuario.getLogin();
     }
     
 }

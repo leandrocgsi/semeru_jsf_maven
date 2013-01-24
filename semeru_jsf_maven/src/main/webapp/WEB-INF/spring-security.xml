@@ -17,6 +17,13 @@
         <access-denied-handler error-page="/acessonegado.faces" />
     </http>                
     
+    <!-- Usaremos dessa forma se quisermos sobrescrever a autentication provider -->
+<!--    <authentication-manager>
+                <authentication-provider ref="customAuthenticationProvider"/>
+            </authentication-manager>
+        <beans:bean id="customAuthenticationProvider" class="br.com.semeru.security.CustomAuthenticationProvider"/>-->
+    
+    <!-- por padrão faremos assim -->  
     <authentication-manager>
         <authentication-provider>
             <password-encoder hash="sha"/>
@@ -31,6 +38,6 @@
         <b:property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <b:property name="username" value="root" />
         <b:property name="password" value="" />
-    </b:bean>
+    </b:bean>-->
     
 </b:beans>
