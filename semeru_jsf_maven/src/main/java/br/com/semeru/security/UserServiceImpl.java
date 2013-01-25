@@ -10,7 +10,7 @@ import java.util.Collection;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.authority.GrantedAuthorityImpl;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -38,7 +38,10 @@ public class UserServiceImpl implements UserDetailsService, Serializable {
                 boolean accountNonLocked = true; //userBean.isActive()
 
                 Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-                authorities.add(new SimpleGrantedAuthority(usuario.getPermissao()));
+                //Use assim se você usa o Spring Security 3.0.5.RELEASE
+                authorities.add(new GrantedAuthorityImpl(usuario.getPermissao()));
+                //Já na versão 3.1.3.RELEASE essa classe foi depreciada e você deve usar como no trecho abaixo
+                //authorities.add(new SimpleGrantedAuthority(usuario.getPermissao()));
                 User user = new User(
                         login,
                         password,
