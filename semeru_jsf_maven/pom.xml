@@ -10,18 +10,17 @@
     <name>semeru_jsf_maven</name>
 
     <properties>
-        <spring.version>3.1.1.RELEASE</spring.version>
-        <spring-security.version>3.0.5.RELEASE</spring-security.version>
+        <spring.version>3.0.5.RELEASE</spring.version>
         <themes.version>1.0.8</themes.version>
         <jsf.version>2.1.7</jsf.version>
         <jstl.version>1.2</jstl.version>
         <mysql.version>5.1.9</mysql.version>
         <groovy-all.version>1.7.5</groovy-all.version>
         <hibernate.version>4.0.1.Final</hibernate.version>
-        <slf4j.version>1.6.4</slf4j.version>      
+        <slf4j.version>1.6.4</slf4j.version>
+        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>   
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
     </properties>
     
     <repositories>
@@ -382,7 +381,7 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-taglibs</artifactId>
-            <version>${spring-security.version}</version>
+            <version>3.0.5.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <artifactId>spring-security-acl</artifactId>
@@ -395,14 +394,14 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>${spring-security.version}</version>
+            <version>3.0.5.RELEASE</version>
         </dependency>
 
         <!-- ######## SPRING-SECURITY-CORE ######### -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
-            <version>${spring-security.version}</version>
+            <version>3.0.5.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <artifactId>aspectjrt</artifactId>
@@ -419,7 +418,7 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>${spring-security.version}</version>
+            <version>3.0.5.RELEASE</version>
         </dependency>
 
         <!-- ||| DEPENDÊNCIAS DO SPRING FRAMEWORK |||-->          
@@ -470,7 +469,7 @@
             <artifactId>spring-tx</artifactId>
             <groupId>org.springframework</groupId>
             <type>jar</type>
-            <version>${spring-security.version}</version>
+            <version>3.0.5.RELEASE</version>
         </dependency>
         
         <!-- ############# SPRING-WEB ############# -->
