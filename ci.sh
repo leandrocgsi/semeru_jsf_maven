@@ -3,7 +3,7 @@ cd $(dirname $0)
 
 set -e
 
-./semeru_jsf_maven clean build
+cd semeru_jsf_maven
 sudo rm -rf build
 mvn clean
 sudo rm -rf target
