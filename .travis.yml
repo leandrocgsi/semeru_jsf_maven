@@ -1,5 +1,4 @@
 language: java
 sudo: required
 jdk:
-  - oraclejdk8
-  - oraclejdk7  
+  - oraclejdk8  
