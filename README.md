@@ -2,6 +2,7 @@ Semeru JSF Maven
 ================
 
 [![Build Status](https://travis-ci.org/leandrocgsi/semeru_jsf_maven.svg?branch=master)](https://travis-ci.org/leandrocgsi/semeru_jsf_maven)
+[![Gitter](https://badges.gitter.im/leandrocgsi/semeru_jsf_maven.svg)](https://gitter.im/leandrocgsi/semeru_jsf_maven?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Esse é um projeto simples desenvolvido no curso "Curso De JSF Do Zero À Nuvem" disponibilizado gratuitamente no [Youtube](https://www.youtube.com/playlist?list=PL18bbNo7xuh9d1AyAeC77O8xRz6hPD3iJ).
 
