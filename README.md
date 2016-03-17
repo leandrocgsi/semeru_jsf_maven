@@ -25,15 +25,25 @@ O projeto foi desenvolvido no [Netbeans](https://netbeans.org/) mas roda em qual
 
 Como Fazer o Build do Projeto
 ================
+Acesse a raiz do projeto (onde se encontra o arquivo pom.xml) e execute o comando:
 
+```sh
 mvn clean install -T 4C
+```
+
+Onde clean irá limpar o projeto e install irá buidá-lo -T 4C é opcional e servem para que o build seja executado mais rapidamente com threads em 4 núcleos do seu processador.
 
 Restaurando/Criando o Banco de Dados
 ================
 
-Caso necessário você pode restaurar um backup do banco [disponível nesse link aqui](https://github.com/leandrocgsi/semeru_jsf_maven/blob/master/src/main/resources/ScriptsSQL/dump.sql) e restaurar usando o HeidiSQL ou sua ferramenta de banco de dados favorita.
+O banco de dados é criado automaticamente pelo Hibernate durante a primeira execução do projeto mas caso você julgue necessário você pode restaurar um backup do banco [disponível nesse link aqui](https://github.com/leandrocgsi/semeru_jsf_maven/blob/master/src/main/resources/ScriptsSQL/dump.sql) e restaurar usando o HeidiSQL ou sua ferramenta de banco de dados favorita.
 
 O Spring Security
 ================
 
-Se você restaurar o backup a partir do script mencionado acima ao rodar o projeto poderá logar com as credenciais usuário: "admin" e senha: "admin".
+As senhas são convertidas para SHA1 antes de serem gravadas no banco. Para criar um novo usuário caso o banco esteja vazio você pode inserir manualmente na base e encriptar a senha em SHA1. Caso você prefira restaurar o backup a partir do script mencionado acima ao rodar o projeto poderá logar com as credenciais usuário: "admin" e senha: "admin".
+
+Dúvidas Sobre o Projeto
+================
+
+Em caso de dúvidas você poderá acessar o [Gitter do projeto](https://gitter.im/leandrocgsi/semeru_jsf_maven?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) ou acessar o blog [Semeru](http://semeru.com.br).
