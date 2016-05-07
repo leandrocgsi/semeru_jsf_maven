@@ -12,6 +12,8 @@ Além disso você poderá se aprofundar, um pouco mais, em conceitos teóricos n
 * [Iniciando Se No JSF – 02 – Configurando O Ambiente E Criando O Primeiro Projeto](http://www.semeru.com.br/blog/iniciando-se-no-jsf-02-configurando-o-ambiente-e-criando-o-primeiro-projeto/)
 * [Iniciando Se No JSF – 03 – A Arquitetura Da Aplicação](http://www.semeru.com.br/blog/iniciando-se-no-jsf-03-a-arquitetura-da-aplicacao/)
 
+Gerando um projeto com a mesma estrutaura em minutos
+================
 
 [JSF Hibernate Spring Security Archetype](https://github.com/leandrocgsi/jsf-hibernate-spring-security-archetype)
 
