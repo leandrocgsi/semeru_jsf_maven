@@ -15,7 +15,7 @@ Além disso você poderá se aprofundar, um pouco mais, em conceitos teóricos n
 Gerando um projeto com a mesma estrutaura em minutos
 ================
 
-Você pode se aproveitar do recurso de archetypes do Maven para gerar um projeto com uma estrutura similar atravé do [JSF Hibernate Spring Security Archetype](https://github.com/leandrocgsi/jsf-hibernate-spring-security-archetype). 
+Você pode se aproveitar do recurso de archetypes do Maven para gerar um projeto com uma estrutura similar através do [JSF Hibernate Spring Security Archetype](https://github.com/leandrocgsi/jsf-hibernate-spring-security-archetype) para isso clique  [aqui](https://github.com/leandrocgsi/jsf-hibernate-spring-security-archetype) e descubra como fazer. 
 
 Frameworks e Tecnologias Utilizadas
 ================
