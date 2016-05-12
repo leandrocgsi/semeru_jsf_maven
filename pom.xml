@@ -40,7 +40,7 @@
             <url>http://nexus.emergya.es/nexus/content/groups/public/</url>
         </repository>     
       
-        <repository>
+        <!-- <repository>
             <id>org.springframework.security.taglibs.facelets</id>
             <url>http://trac.bitzeche.de/archiva/repository/mirror/</url>
         </repository>  
@@ -48,7 +48,7 @@
         <repository>
             <id>org.springframework.security.taglibs.facelets</id>
             <url>http://spring-security-facelets-taglib.googlecode.com/svn/repo/</url>
-        </repository>
+        </repository> -->
                
         <!-- REPOSITÓRIO DA AOP ALLIANCE -->
 		<repository>
