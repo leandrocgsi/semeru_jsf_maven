@@ -45,6 +45,7 @@ git clone https://github.com/leandrocgsi/semeru_jsf_maven.git
 
 Como Fazer o Build do Projeto
 ================
+
 Acesse a raiz do projeto (onde se encontra o arquivo pom.xml) e execute o comando:
 
 ```sh
