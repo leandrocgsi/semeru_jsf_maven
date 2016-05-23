@@ -34,6 +34,15 @@ IDE's
 
 O projeto foi desenvolvido no [Netbeans](https://netbeans.org/) mas roda em qualquer IDE como [Eclipse](https://eclipse.org) ou [IntelliJ IDEA](https://www.jetbrains.com/idea/) pois foi construído com o framework [Maven](https://maven.apache.org/). 
 
+Como Baixar Este Projeto
+================
+
+Você pode executar o comando abaixo no terminal ou caso preferir apenas [baixar o arquivo zip aqui](https://github.com/leandrocgsi/semeru_jsf_maven/archive/master.zip) e importar na sua IDE favorita.
+
+```sh
+git clone https://github.com/leandrocgsi/semeru_jsf_maven.git
+```
+
 Como Fazer o Build do Projeto
 ================
 Acesse a raiz do projeto (onde se encontra o arquivo pom.xml) e execute o comando:
