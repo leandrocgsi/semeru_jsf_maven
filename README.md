@@ -57,7 +57,7 @@ Onde clean irá limpar o projeto e install irá buidá-lo -T 4C é opcional e se
 Restaurando/Criando o Banco de Dados
 ================
 
-O banco de dados é criado automaticamente pelo Hibernate durante a primeira execução do projeto mas caso você julgue necessário você pode restaurar um backup do banco [disponível nesse link aqui](https://github.com/leandrocgsi/semeru_jsf_maven/blob/master/src/main/resources/ScriptsSQL/dump.sql) e restaurar usando o HeidiSQL ou sua ferramenta de banco de dados favorita.
+O banco de dados é criado automaticamente pelo Hibernate durante a primeira execução do projeto mas caso você julgue necessário você pode restaurar um backup do banco [disponível nesse link aqui](https://github.com/leandrocgsi/semeru_jsf_maven/blob/master/src/main/resources/ScriptsSQL/dump.sql) e restaurar usando o HeidiSQL ou sua ferramenta de banco de dados favorita. Caso não saiba como fazer isso dê um pulinho no Youtube e [veja este vídeo aqui](https://www.youtube.com/watch?v=8axnC2c2_Jo).
 
 O Spring Security
 ================
