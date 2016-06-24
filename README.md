@@ -70,7 +70,6 @@ Como configurar o Ambiente
 Aprenda a configurar todo o ambiente de desenvolvimento Java no meu canal no Youtube e [veja este vídeo aqui](https://www.youtube.com/watch?v=8axnC2c2_Jo).
 
 
-
 Dúvidas Sobre o Projeto
 ================
 
