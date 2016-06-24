@@ -64,6 +64,9 @@ O Spring Security
 
 As senhas são convertidas para SHA1 antes de serem gravadas no banco. Para criar um novo usuário caso o banco esteja vazio você pode inserir manualmente na base e encriptar a senha em SHA1. Para isso você pode usar um site como o [SHA1 Online](http://www.sha1-online.com/) para encriptar. Caso você prefira restaurar o backup a partir do script mencionado acima ao rodar o projeto poderá logar com as credenciais usuário: "admin" e senha: "admin".
 
+Como configurar o Ambiente
+================
+
 Dúvidas Sobre o Projeto
 ================
 
