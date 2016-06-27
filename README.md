@@ -67,7 +67,7 @@ As senhas são convertidas para SHA1 antes de serem gravadas no banco. Para cria
 Como configurar o Ambiente
 ================
 
-Aprenda a configurar todo o ambiente de desenvolvimento Java no meu canal no Youtube e [veja este vídeo aqui](https://www.youtube.com/watch?v=8axnC2c2_Jo).
+Aprenda a configurar todo o ambiente de desenvolvimento Java no meu canal no Youtube e [nessa playlist aqui](https://www.youtube.com/playlist?list=PL18bbNo7xuh98_ImLkK-XdbVmLnKERZrD) você vai aprender a instalar e configurar o Java e ferramentas como Maven, Eclipse, Netbeans e GIT além de instalar o banco de dados MySQL.
 
 Dúvidas Sobre o Projeto
 ================
